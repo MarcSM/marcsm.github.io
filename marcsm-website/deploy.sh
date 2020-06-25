@@ -12,17 +12,11 @@ git init
 git add index.html
 git add favicon.ico
 
-# navigate into the build output directory
-cd dist
-
 # if you are deploying to a custom domain
 echo 'marcsm.cat' > CNAME
 
-cd -
+git add CNAME
 
-# git init
-# git add -A
-# git add .
 git add dist/*
 git commit -m 'Deploy'
 
