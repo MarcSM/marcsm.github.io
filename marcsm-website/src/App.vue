@@ -1,64 +1,119 @@
 <template>
   <div id="app">
-    <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-    <br><br>
-    <h1>{{ msg }}</h1>
-    <!-- <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul> -->
-  </div>
+
+    <navigation :height="navigation_height"></navigation>
+
+    <div class="mask vignette">
+        <flat-surface-shader class="shader"
+                            type="webgl"
+                            :mesh="{
+                                ambient: '#555555',
+                                diffuse: '#ffffff',
+                                width: 1.2,
+                                height: 1.2,
+                                depth: 10,
+                                segments: 16,
+                                slices: 10,
+                                xRange: 0.8,
+                                yRange: 0.1,
+                                speed: 0.002}"
+                            :light="{
+                                autopilot: true,
+                                ambient: '#880066',
+                                diffuse: '#ff8800',
+                                count: '2',
+                                zOffset: '100',
+                                draw: false}">
+        </flat-surface-shader>
+        <div class="marc-header">
+            <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+            <div class="title">
+                MarcSM
+            </div>
+            <div class="subtitle">
+                Sound, Technology and Creativity
+            </div>
+        </div>
+    </div>
+
+    <Footer/>
+</div>
 </template>
 
 <script>
+import Navigation from './components/navbar.vue'
+import Footer from './components/footer.vue'
+
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'MarcSM'
+
+    data() {
+        return {
+            navigation_height: 50
+        }
+    },
+
+    name: 'App',
+  
+    components: {
+        Navigation,
+        Footer
     }
-  }
 }
 </script>
 
 <style lang="scss">
-body {
-  color: white;
-  background-color: black;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-top: 60px;
-}
+    html,
+    body {
+        font-family: "Vidaloka", serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #app {
+        position: relative;
+    }
+    
+    .shader {
+        width: 100%;
+        height: 100vh;
+        height: 100%;
+        position: absolute;
+        z-index: -10000;
+    }
+    
+    .mask {
+        position: relative;
+        display: flex;
+    }
 
-h1, h2 {
-  font-weight: normal;
-}
+    .marc-header
+    {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgba(255, 255, 255, 0.9)
+    }
+    
+    .title {
+        font-size: 7em;
+        font-family: Teko, sans-serif;
+        // text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .subtitle {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        font-size: 1.7em;
+        margin-bottom: 30px;
+    }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+    .vignette {
+        background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(173, 91, 91, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+    }
 </style>
