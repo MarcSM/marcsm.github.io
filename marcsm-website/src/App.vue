@@ -2,7 +2,7 @@
   <div id="app">
 
 
-    <div class="mask vignette">
+    <div class="mask">
         
         <flat-surface-shader class="shader" type="webgl"
                             :mesh="fss_back.mesh"
@@ -11,7 +11,7 @@
 
         <navigation class="navigation" :height="navigation_height"></navigation>
         
-        <div class="marc-header">
+        <div class="marc-header vignette">
             <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
             <div class="title">
                 MarcSM
@@ -110,7 +110,6 @@ export default {
 
     .shader {
         width: 100%;
-        height: 100vh;
         height: 100%;
         position: absolute;
         // z-index: -10000;
@@ -155,7 +154,7 @@ export default {
     }
 
     .vignette {
-        background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(173, 91, 91, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+        background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
     }
 
     .fa {
