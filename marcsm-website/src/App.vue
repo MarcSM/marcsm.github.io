@@ -1,7 +1,6 @@
 <template>
   <div id="app">
 
-
     <div class="mask">
         
         <flat-surface-shader class="shader" type="webgl"
@@ -12,7 +11,45 @@
         <navigation class="navigation" :height="navigation_height"></navigation>
         
         <div class="marc-header vignette">
-            <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+
+
+<!-- <div class="row">
+<div class="col-md-4">
+    <b-img class="thumbnail img-responsive" fluid rounded="circle" src="https://github.com/MarcSM.png" />
+</div>
+</div> -->
+
+            <!-- <p class="thumbnail img-responsive">
+                <b-img class="thumbnail img-responsive" rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+            </p> -->
+                <!-- <b-img class="thumbnail img-responsive" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img> -->
+
+            <div class="github-image-div">
+                <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+                <!-- <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img> -->
+            </div>
+
+            <h1 class="title">
+                MarcSM
+            </h1>
+            <h3 class="subtitle">
+                Sound, Technology and Creativity
+            </h3>
+
+            <p class="lead">
+                <a href="http://github.com/MarcSM" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/_marcsm_/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <!-- <a href="#" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">Learn more</a> -->
+            </p>
+
+            <!-- <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
             <div class="title">
                 MarcSM
             </div>
@@ -29,7 +66,7 @@
                 <a href="https://www.instagram.com/_marcsm_/" target="_blank">
                     <i class="fa fa-instagram"></i>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -108,6 +145,18 @@ export default {
     //     }
     // }
 
+    .github-image-div {
+        text-align: center;
+        width: auto;
+        height: 50%;
+    }
+
+    .github-image {
+        display: block;
+        width: auto;
+        height: 100%;
+    }
+
     .shader {
         width: 100%;
         height: 100%;
@@ -140,16 +189,18 @@ export default {
     }
     
     .title {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        font-size: 8.6em;
-        margin-bottom: -0.25em;
+        font-family: Avenir, Helvetica, Arial, sans-serif !important;
+        
+        font-size: 7.45em;
+        margin-bottom: 0;
+
         // font-family: Teko, sans-serif;
         // text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
     }
     
     .subtitle {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        font-size: 2em;
+        font-family: Avenir, Helvetica, Arial, sans-serif !important;
+        // font-size: 2em;
         margin-bottom: 1em;
     }
 

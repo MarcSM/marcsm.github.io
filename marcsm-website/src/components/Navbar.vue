@@ -2,7 +2,7 @@
     <div>
       
       <!-- bg-transparent -->
-    <b-navbar class="navbar-color" toggleable="sm" type="dark" variant="dark">
+    <b-navbar class="navbar-color" toggleable="md" type="dark" variant="dark">
     <b-navbar-brand href="#">MarcSM</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -36,7 +36,7 @@
   }
 
   // Small devices (landscape phones, less than 768px)
-  @media (max-width: 575.98px)
+  @media (max-width: 767.98px)
   {
     .navbar-color {
       background-color: rgba(0, 0, 0, 0.4) !important;
