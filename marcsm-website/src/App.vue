@@ -1,9 +1,8 @@
 <template>
   <div id="app">
 
-    <navigation :height="navigation_height"></navigation>
-
     <div class="mask vignette">
+        
         <flat-surface-shader class="shader"
                             type="webgl"
                             :mesh="{
@@ -12,7 +11,7 @@
                                 width: 1.2,
                                 height: 1.2,
                                 depth: 10,
-                                segments: 16,
+                                segments: 10,
                                 slices: 10,
                                 xRange: 0.8,
                                 yRange: 0.1,
@@ -25,6 +24,9 @@
                                 zOffset: '100',
                                 draw: false}">
         </flat-surface-shader>
+
+        <navigation class="navigation" :height="navigation_height"></navigation>
+        
         <div class="marc-header">
             <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
             <div class="title">
@@ -75,6 +77,19 @@ export default {
         position: relative;
     }
     
+    .navigation {
+        position: absolute;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    // // Small devices (landscape phones, 576px and up)
+    // @media (min-width: 576px) {
+    //     .navigation {
+    //         position: relative;
+    //     }
+    // }
+
     .shader {
         width: 100%;
         height: 100vh;

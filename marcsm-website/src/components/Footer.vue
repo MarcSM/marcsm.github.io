@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="footer-background">
         <footer class="container py-5">
             <div class="row">
                 <div class="col-12 col-md">
-                <small class="d-block mb-3 text-muted">© 2020</small>
+                <small class="d-block mb-3 text-muted">© Marc Sanchez Martinez 2020</small>
                 </div>
                 <div class="col-6 col-md">
                 <h5>About</h5>
@@ -30,3 +30,12 @@
         </footer>
     </div>
 </template>
+
+
+<style lang="scss">
+
+  .footer-background {
+      color: rgba(255, 255, 255, 0.8) !important;
+      background-color: rgba(0, 0, 0, 1.0) !important;
+  }
+</style>

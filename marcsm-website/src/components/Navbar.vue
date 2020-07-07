@@ -1,6 +1,7 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" variant="dark">
+      <!-- bg-transparent -->
+    <b-navbar class="navbar-color" toggleable="sm" type="dark" variant="dark">
     <b-navbar-brand href="#">MarcSM</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -38,3 +39,17 @@
   </b-navbar>
     </div>
 </template>
+
+<style lang="scss">
+
+  .navbar-color {
+      background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+      .navbar-color {
+          background-color: transparent !important;
+      }
+  }
+</style>
