@@ -1,32 +1,129 @@
 <template>
   <div id="app">
-
-    <div class="mask">
-        
-        <flat-surface-shader class="shader" type="webgl"
+      
+        <div class="mask">
+            
+            <flat-surface-shader class="shader" type="webgl"
                             :mesh="fss_back.mesh"
                             :light="fss_back.light">
-        </flat-surface-shader>
-
-        <navigation class="navigation" :height="navigation_height"></navigation>
+            </flat-surface-shader>
+            
+            <div class="vignette"></div>
+        </div>
         
-        <div class="marc-header vignette">
+        <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
+        
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 bg-red">
+
+                    <div class="vh-100">
+
+                        <div class="row justify-content-center" v-bind:style="{ height: navigation_height + 'px' }">
+                            <navigation class="navigation" :height="navigation_height"></navigation>
+                        </div>
+                        
+                        <div class="row" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
+                            
+                            <div class="col-12">
+
+                                <div class="d-flex flex-column h-100">
+
+                                    <div class="row github-image-div">
+                                        <div class="col">
+                                            <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+                                        </div>
+                                    </div>
+
+                                    <div class="row flex-grow-1">
+                                        <div class="col justify-content-center align-self-center">
+                                            <h1 class="title contrast-shadow">
+                                                MarcSM
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="row flex-grow-1">
+                                        <div class="col justify-content-center align-self-center">
+                                            <h1 class="subtitle contrast-shadow">
+                                                <small>
+                                                    Sound, Technology and Creativity
+                                                </small>
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="row text-center px-sm-5">
+                                        <div class="col justify-content-center align-self-center">
+                                            <div class="row h-100 p-2 contrast-shadow">
+                                                <a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
+                                                    <i class="fa fa-2x fa-github"></i>
+                                                </a>
+                                                <a class="col h-100 justify-content-center align-self-center" href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
+                                                    <i class="fa fa-2x fa-linkedin"></i>
+                                                </a>
+                                                <a class="col h-100 justify-content-center align-self-center" href="https://www.instagram.com/_marcsm_/" target="_blank">
+                                                    <i class="fa fa-2x fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row flex-grow-1 text-center">
+                                        <div class="col">
+                                            <p class="bio contrast-shadow">
+                                                Experienced in audio signal processing, games, sound design, software development and the world of music production.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-8 bg-gray" style="background-color: green;"></div> -->
+            </div>
+        </div>
+
+    <!-- <div class="mask">
+        
+        
+    </div> -->
+
+        <!-- <div class="marc-header vignette">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col" style="background-color: red;">
+                        <h1 class="title">
+                            MarcSM
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="background-color: green;">
+                        <h3 class="col subtitle">
+                            Sound, Technology and Creativity
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="background-color: blue;">
+                        <p class="bio">
+                            BIO
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
-<!-- <div class="row">
-<div class="col-md-4">
-    <b-img class="thumbnail img-responsive" fluid rounded="circle" src="https://github.com/MarcSM.png" />
-</div>
-</div> -->
-
-            <!-- <p class="thumbnail img-responsive">
-                <b-img class="thumbnail img-responsive" rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-            </p> -->
-                <!-- <b-img class="thumbnail img-responsive" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img> -->
+            SEPARATOR
 
             <div class="github-image-div">
                 <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-                <!-- <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img> -->
             </div>
 
             <h1 class="title">
@@ -46,32 +143,12 @@
                 <a href="https://www.instagram.com/_marcsm_/" target="_blank">
                     <i class="fa fa-instagram"></i>
                 </a>
-                <!-- <a href="#" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">Learn more</a> -->
             </p>
+        </div> 
+    </div>-->
 
-            <!-- <b-img rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-            <div class="title">
-                MarcSM
-            </div>
-            <div class="subtitle">
-                Sound, Technology and Creativity
-            </div>
-            <div class="">
-                <a href="http://github.com/MarcSM" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/_marcsm_/" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div> -->
-        </div>
+        <Footer/>
     </div>
-
-    <Footer/>
-</div>
 </template>
 
 <script>
@@ -82,7 +159,7 @@ export default {
 
     data() {
         return {
-            navigation_height: 50,
+            navigation_height: 56,
             fss_back: {
                 mesh: {
                     ambient: '#555555',
@@ -125,6 +202,7 @@ export default {
         font-weight: normal;
         margin: 0;
         padding: 0;
+        color: rgba(255, 255, 255, 1.0);
         background-color: rgba(24, 26, 27, 1.0) !important;
     }
     
@@ -134,7 +212,7 @@ export default {
     
     .navigation {
         position: absolute;
-        width: 100%;
+        width: 100% !important;
         z-index: 10000;
     }
 
@@ -146,22 +224,50 @@ export default {
     // }
 
     .github-image-div {
+        // text-align: center;
+        // width: auto;
+        // height: 100px;
+        // height: 10% !important;
         text-align: center;
-        width: auto;
-        height: 50%;
+        height: 50% !important;
     }
 
     .github-image {
-        display: block;
-        width: auto;
+        padding: 0.5rem;
+        // display: flex;
+        // display: block;
+        // width: auto;
+        // height: auto;
+        // width: 100%;
         height: 100%;
+        // height: auto;
+    }
+
+    .mask {
+        position: absolute;
+        // position: relative;
+        // display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .vignette {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // position: relative;
+        background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+        // background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgb(0, 255, 64) 100%);
+        // z-index: 10000;
     }
 
     .shader {
         width: 100%;
         height: 100%;
-        position: absolute;
-        // z-index: -10000;
+        // position: relative;
+        // display: flex;
+        // z-index: -100;
         
         // -webkit-filter: blur(5px);
         // -moz-filter: blur(5px);
@@ -169,17 +275,12 @@ export default {
         // -ms-filter: blur(5px);
         // filter: blur(5px);
     }
-    
-    .mask {
-        position: relative;
-        display: flex;
-    }
 
     .marc-header
     {
         width: 100%;
         height: 100vh;
-        position: relative;
+        position: absolute;
         top: 0;
         display: flex;
         justify-content: center;
@@ -190,29 +291,52 @@ export default {
     
     .title {
         font-family: Avenir, Helvetica, Arial, sans-serif !important;
-        
-        font-size: 7.45em;
-        margin-bottom: 0;
+        text-align: center;
+        // font-size: 7.45em;
+        // margin-bottom: 0;
 
         // font-family: Teko, sans-serif;
-        // text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+        // text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75);
     }
     
     .subtitle {
         font-family: Avenir, Helvetica, Arial, sans-serif !important;
+        text-align: center;
+        // padding: 1em;
         // font-size: 2em;
-        margin-bottom: 1em;
+        // margin-bottom: 1em;
     }
 
-    .vignette {
-        background-image: -webkit-radial-gradient(50% 50%, ellipse cover, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+    .contrast-shadow
+    {
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75);
     }
 
-    .fa {
-        font-size: 2.5em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+    
+
+    @media (min-width: 576px)
+    {
+        h1 {
+            font-size: 4rem !important;
+        }
+
+        .fa {
+            font-size: 4rem !important;
+        }
+
+        .bio {
+            font-size: 1.5em;
+            padding: 1em;
+        }
     }
+
+
+    // .fa {
+    //     font-size: 2.5em;
+    //     // font-size: 2.5em;
+    //     // padding-left: 0.5em;
+    //     // padding-right: 0.5em;
+    // }
 
     a {
         color: rgba(255, 255, 255, 1.0);
