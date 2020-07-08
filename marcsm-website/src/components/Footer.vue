@@ -1,6 +1,6 @@
 <template>
     <div class="footer-background">
-        <footer class="container py-5">
+        <footer class="container-fluid p-5">
             <div class="row">
                 <div class="col-12 col-md">
                 <small class="d-block mb-3 text-muted">© Marc Sanchez Martinez 2020</small>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      
+
         <div class="mask">
             
             <flat-surface-shader class="shader" type="webgl"
@@ -11,7 +11,7 @@
             <div class="vignette"></div>
         </div>
         
-        <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
+        <navigation class="navigation" :height="navigation_height"></navigation>
         
         <div class="container">
 
@@ -22,7 +22,7 @@
                     <div class="vh-100">
 
                         <div class="row justify-content-center" v-bind:style="{ height: navigation_height + 'px' }">
-                            <navigation class="navigation" :height="navigation_height"></navigation>
+                            <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
                         </div>
                         
                         <div class="row" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
@@ -32,8 +32,8 @@
                                 <div class="d-flex flex-column h-100">
 
                                     <div class="row github-image-div">
-                                        <div class="col">
-                                            <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img>
+                                        <div class="col h-100">
+                                            <b-img class="github-image" fluid-grow rounded="circle" src="https://github.com/MarcSM.png"></b-img>
                                         </div>
                                     </div>
 
@@ -239,7 +239,10 @@ export default {
         // width: auto;
         // height: auto;
         // width: 100%;
-        height: 100%;
+        width: auto !important;
+        // height: 100%;
+        // height: 100% !important;
+        max-height: 100% !important;
         // height: auto;
     }
 
@@ -314,7 +317,8 @@ export default {
 
     
 
-    @media (min-width: 576px)
+    // @media (min-width: 576px)
+    @media (min-width: 768px)
     {
         h1 {
             font-size: 4rem !important;
