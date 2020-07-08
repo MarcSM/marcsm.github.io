@@ -17,135 +17,72 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-12 bg-red">
+                <div class="col-12">
 
                     <div class="vh-100">
 
-                        <div class="row justify-content-center" v-bind:style="{ height: navigation_height + 'px' }">
+                        <div class="row" v-bind:style="{ height: navigation_height + 'px', 'background-color': color_layout ? 'green' : '' }">
                             <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
                         </div>
                         
                         <div class="row" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
                             
-                            <div class="col-12">
+                            <div class="col d-flex flex-column h-100" v-bind:style="{ 'background-color': color_layout ? 'blue' : '' }">
 
-                                <div class="d-flex flex-column h-100">
-
-                                    <div class="row github-image-div">
-                                        <div class="col h-100">
-                                            <b-img class="github-image" fluid-grow rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-                                        </div>
+                                <div class="row" style="height: 50% !important" v-bind:style="{ 'background-color': color_layout ? 'pink' : '' }">
+                                    <div class="col text-center justify-content-center align-self-center h-100">
+                                        <b-img class="github-image" fluid-grow rounded="circle" src="https://github.com/MarcSM.png"></b-img>
                                     </div>
+                                </div>
 
-                                    <div class="row flex-grow-1">
-                                        <div class="col justify-content-center align-self-center">
-                                            <h1 class="title contrast-shadow">
-                                                MarcSM
-                                            </h1>
-                                        </div>
+                                <div class="row" style="height: 20% !important" v-bind:style="{ 'background-color': color_layout ? 'cyan' : '' }">
+                                    <div class="col justify-content-center align-self-center">
+                                        <h1 class="title contrast-shadow">
+                                            MarcSM
+                                        </h1>
                                     </div>
+                                </div>
 
-                                    <div class="row flex-grow-1">
-                                        <div class="col justify-content-center align-self-center">
-                                            <h1 class="subtitle contrast-shadow">
-                                                <small>
-                                                    Sound, Technology and Creativity
-                                                </small>
-                                            </h1>
-                                        </div>
+                                <div class="row" style="height: 15% !important" v-bind:style="{ 'background-color': color_layout ? 'yellow' : '' }">
+                                    <div class="col justify-content-center align-self-center">
+                                        <h1 class="subtitle contrast-shadow">
+                                            <small>
+                                                Sound, Technology and Creativity
+                                            </small>
+                                        </h1>
                                     </div>
+                                </div>
 
-                                    <div class="row text-center px-sm-5">
-                                        <div class="col justify-content-center align-self-center">
-                                            <div class="row h-100 p-2 contrast-shadow">
-                                                <a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
-                                                    <i class="fa fa-2x fa-github"></i>
-                                                </a>
-                                                <a class="col h-100 justify-content-center align-self-center" href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
-                                                    <i class="fa fa-2x fa-linkedin"></i>
-                                                </a>
-                                                <a class="col h-100 justify-content-center align-self-center" href="https://www.instagram.com/_marcsm_/" target="_blank">
-                                                    <i class="fa fa-2x fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row flex-grow-1 text-center">
-                                        <div class="col">
-                                            <p class="bio contrast-shadow">
-                                                Experienced in audio signal processing, games, sound design, software development and the world of music production.
-                                            </p>
+                                <div class="row text-center px-sm-5" style="height: 15% !important" v-bind:style="{ 'background-color': color_layout ? 'purple' : '' }">
+                                    <div class="col justify-content-center align-self-center">
+                                        <div class="row h-100 p-2 contrast-shadow">
+                                            <a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
+                                                <i class="fa fa-2x fa-github"></i>
+                                            </a>
+                                            <a class="col h-100 justify-content-center align-self-center" href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
+                                                <i class="fa fa-2x fa-linkedin"></i>
+                                            </a>
+                                            <a class="col h-100 justify-content-center align-self-center" href="https://www.instagram.com/_marcsm_/" target="_blank">
+                                                <i class="fa fa-2x fa-instagram"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- <div class="row text-center px-sm-5" style="background-color: white; height: 20% !important">
+                                    <div class="col text-center justify-content-center align-self-center h-100">
+                                        <p class="bio contrast-shadow">
+                                            Experienced in audio signal processing, games, sound design, software development and the world of music production.
+                                        </p>
+                                    </div>
+                                </div> -->
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-8 bg-gray" style="background-color: green;"></div> -->
             </div>
         </div>
-
-    <!-- <div class="mask">
-        
-        
-    </div> -->
-
-        <!-- <div class="marc-header vignette">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col" style="background-color: red;">
-                        <h1 class="title">
-                            MarcSM
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" style="background-color: green;">
-                        <h3 class="col subtitle">
-                            Sound, Technology and Creativity
-                        </h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" style="background-color: blue;">
-                        <p class="bio">
-                            BIO
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-            SEPARATOR
-
-            <div class="github-image-div">
-                <b-img class="github-image" fluid rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-            </div>
-
-            <h1 class="title">
-                MarcSM
-            </h1>
-            <h3 class="subtitle">
-                Sound, Technology and Creativity
-            </h3>
-
-            <p class="lead">
-                <a href="http://github.com/MarcSM" target="_blank">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/_marcsm_/" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </p>
-        </div> 
-    </div>-->
 
         <Footer/>
     </div>
@@ -159,6 +96,7 @@ export default {
 
     data() {
         return {
+            color_layout: true,
             navigation_height: 56,
             fss_back: {
                 mesh: {
@@ -233,7 +171,7 @@ export default {
     }
 
     .github-image {
-        padding: 0.5rem;
+        // padding: 0.5rem;
         // display: flex;
         // display: block;
         // width: auto;
@@ -318,7 +256,7 @@ export default {
     
 
     // @media (min-width: 576px)
-    @media (min-width: 768px)
+    @media (min-width: 992px)
     {
         h1 {
             font-size: 4rem !important;
@@ -329,8 +267,8 @@ export default {
         }
 
         .bio {
-            font-size: 1.5em;
-            padding: 1em;
+            // font-size: 1.5em;
+            // padding: 1em;
         }
     }
 
