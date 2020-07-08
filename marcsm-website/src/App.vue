@@ -25,17 +25,17 @@
                             <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
                         </div>
                         
-                        <div class="row" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
+                        <div class="row text-center" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
                             
                             <div class="col d-flex flex-column h-100" v-bind:style="{ 'background-color': color_layout ? 'blue' : '' }">
 
-                                <div class="row" style="height: 50% !important" v-bind:style="{ 'background-color': color_layout ? 'pink' : '' }">
-                                    <div class="col text-center justify-content-center align-self-center h-100">
+                                <div class="row p-2" style="height: 50%" v-bind:style="{ 'background-color': color_layout ? 'pink' : '' }">
+                                    <div class="col justify-content-center align-self-center h-100">
                                         <b-img class="github-image" fluid-grow rounded="circle" src="https://github.com/MarcSM.png"></b-img>
                                     </div>
                                 </div>
 
-                                <div class="row" style="height: 20% !important" v-bind:style="{ 'background-color': color_layout ? 'cyan' : '' }">
+                                <div class="row" style="height: 15%" v-bind:style="{ 'background-color': color_layout ? 'cyan' : '' }">
                                     <div class="col justify-content-center align-self-center">
                                         <h1 class="title contrast-shadow">
                                             MarcSM
@@ -43,7 +43,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row" style="height: 15% !important" v-bind:style="{ 'background-color': color_layout ? 'yellow' : '' }">
+                                <div class="row" style="height: 17.5%" v-bind:style="{ 'background-color': color_layout ? 'yellow' : '' }">
                                     <div class="col justify-content-center align-self-center">
                                         <h1 class="subtitle contrast-shadow">
                                             <small>
@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row text-center px-sm-5" style="height: 15% !important" v-bind:style="{ 'background-color': color_layout ? 'purple' : '' }">
+                                <div class="row px-sm-5" style="height: 17.5%" v-bind:style="{ 'background-color': color_layout ? 'purple' : '' }">
                                     <div class="col justify-content-center align-self-center">
                                         <div class="row h-100 p-2 contrast-shadow">
                                             <a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
@@ -96,7 +96,7 @@ export default {
 
     data() {
         return {
-            color_layout: true,
+            color_layout: false,
             navigation_height: 56,
             fss_back: {
                 mesh: {
@@ -217,18 +217,18 @@ export default {
         // filter: blur(5px);
     }
 
-    .marc-header
-    {
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color: rgba(255, 255, 255, 0.9)
-    }
+    // .marc-header
+    // {
+    //     width: 100%;
+    //     height: 100vh;
+    //     position: absolute;
+    //     top: 0;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     color: rgba(255, 255, 255, 0.9)
+    // }
     
     .title {
         font-family: Avenir, Helvetica, Arial, sans-serif !important;
