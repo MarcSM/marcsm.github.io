@@ -9,9 +9,8 @@
 						MarcSM
 					</b-navbar-brand>
 
-					<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+					<!-- <b-navbar-toggle target="nav_collapse"></b-navbar-toggle> -->
 
-					<!-- <b-button v-b-toggle.collapse-1 variant="primary" type="button" class="navbar-toggle" data-toggle="collapse"> -->
 					<b-button v-b-toggle.collapse-1 variant="primary" type="button" class="navbar-toggle" data-toggle="collapse">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
