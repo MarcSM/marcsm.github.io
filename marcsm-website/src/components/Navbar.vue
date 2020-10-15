@@ -1,49 +1,56 @@
 <template>
 	<div>
-		<b-navbar class="navbar-fixed-top background-color" toggleable="sm" type="default fixed-top">
-				<div class="container-fluid">
-						<div class="navbar-header page-scroll">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-								</button>
+		<b-navbar class="navbar-fixed-top background-color" toggleable="md" type="default fixed-top">
+			<!-- <div class="container-fluid"> -->
+				<!-- <div class="navbar-header page-scroll"> -->
 
-								<b-navbar-brand class="navbar-brand page-scroll" href="#page-top">
-										<!-- <img class="logo" src="dist/img/logos/medievalroutes/logo3BC.png">
-										&nbsp;&nbsp;-->MarcSM</b-navbar-brand>
+					<b-navbar-brand class="navbar-brand page-scroll" href="#page-top">
+						<!-- <img class="logo" src="dist/img/logos/medievalroutes/logo3BC.png">&nbsp;&nbsp;-->
+						MarcSM
+					</b-navbar-brand>
 
-						</div>
+					<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<b-collapse class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-								<b-navbar-nav class="nav navbar-nav navbar-right">
-										<li class="nav-item hidden">
-												<a href="#page-top"></a>
-										</li>
-										<li class="nav-item">
-												<a class="page-scroll" href="#about">about</a>
-										</li>
-										<li class="nav-item">
-												<a class="page-scroll" href="#projects">projects</a>
-										</li>
-										<li class="nav-item">
-												<a class="page-scroll" href="#cv">cv</a>
-										</li>
-										<li class="nav-item">
-												<a class="page-scroll" href="#contact">contact</a>
-										</li>
-										<!-- TODO <li class="nav-item">
-												<select class="btn btn-lang" onChange="window.location.href=this.value">
-													<option value="?lg=ca">Catal&agrave;</option>
-													<option value="?lg=es">Castell&agrave;</option>
-													<option value="?lg=en">Angl&eacute;s</option>
-												</select>
-										</li> -->
-								</b-navbar-nav>
-						</b-collapse>
-				</div>
+					<!-- <b-button v-b-toggle.collapse-1 variant="primary" type="button" class="navbar-toggle" data-toggle="collapse"> -->
+					<b-button v-b-toggle.collapse-1 variant="primary" type="button" class="navbar-toggle" data-toggle="collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</b-button>
+
+					
+
+				<!-- </div> -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<b-collapse id="collapse-1" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about">about</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#projects">projects</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#cv">cv</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">contact</a>
+						</li>
+						<!-- TODO <li>
+								<select class="btn btn-lang" onChange="window.location.href=this.value">
+									<option value="?lg=ca">Catal&agrave;</option>
+									<option value="?lg=es">Castell&agrave;</option>
+									<option value="?lg=en">Angl&eacute;s</option>
+								</select>
+						</li> -->
+					</ul>
+				</b-collapse>
+			<!-- </div> -->
 		</b-navbar>
 	</div>
 </template>
@@ -185,7 +192,7 @@
 		}
 		.navbar-default.navbar-shrink {
 				padding: 10px 0;
-				background-color: $background-color;
+				background-color: $background-color;;
 		}
 		.navbar-default.navbar-shrink .navbar-brand {
 				font-size: 1.5em;

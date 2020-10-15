@@ -5,7 +5,7 @@
 				<div class="col-lg-12 text-center">
 					<h2 class="section-heading">Projects</h2>
 					<h3 class="section-subheading text-muted">
-						Experienced in audio software development, audio signal processing, sound design, and music production.
+						Take a look at some of the projects I have worked on
 					</h3>
 				</div>
 			</div>
