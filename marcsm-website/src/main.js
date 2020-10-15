@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import App from './App.vue'
+// import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
 
@@ -14,7 +15,17 @@ Vue.use(BootstrapVue)
 Vue.use(FlatSurfaceShader)
     // Vue.use(VueDarkMode);
 
-// import Navigation from './components/Navbar.vue'
+// var tableActions = require('./components/tables/partials/Actions.vue')
+
+Vue.component('custom-header', require('./components/CustomHeader.vue').default);
+Vue.component('navigation', require('./components/Navbar.vue').default);
+Vue.component('custom-footer', require('./components/Footer.vue').default);
+
+// Sections
+Vue.component('section-about', require('./components/sections/About.vue').default);
+Vue.component('section-projects', require('./components/sections/Projects.vue').default);
+
+// import navigation from './components/Navbar.vue'
 // import Footer from './components/Footer.vue'
 
 // Vue.use(Navbar)
@@ -30,6 +41,15 @@ Vue.use(FlatSurfaceShader)
 //         Navigation,
 //         Footer
 //     }
+// });
+
+Vue.config.devtools = true;
+
+// new Vue({ el: '#app' })
+
+// var app = new Vue({
+//     el: '#app',
+//     // i18n: i18n
 // });
 
 new Vue({

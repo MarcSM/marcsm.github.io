@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
-
-        <div class="mask">
+  <div>
+  <!-- <div id="app"> -->
+      
+      
+        <div id="page-top" class="mask">
             
             <flat-surface-shader class="shader" type="webgl"
                             :mesh="fss_back.mesh"
@@ -10,87 +12,34 @@
             
             <div class="vignette"></div>
         </div>
+
+        <custom-header
+            :navigationHeight="navigation_height"
+            :colorLayout="color_layout">
+        </custom-header>
         
         <navigation class="navigation" :height="navigation_height"></navigation>
+
+        <section-about
+            :navigationHeight="navigation_height"
+            backgroundColor="section-color">
+        </section-about>
+
+        <section-projects
+            :navigationHeight="navigation_height"
+            backgroundColor="section-alternate-color">
+        </section-projects>
         
-        <div class="container">
+        <custom-footer></custom-footer>
 
-            <div class="row justify-content-center">
-
-                <div class="col-12">
-
-                    <div class="vh-100">
-
-                        <div class="row" v-bind:style="{ height: navigation_height + 'px', 'background-color': color_layout ? 'green' : '' }">
-                            <!-- <navigation class="navigation" :height="navigation_height"></navigation> -->
-                        </div>
-                        
-                        <div class="row text-center" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
-                            
-                            <div class="col d-flex flex-column h-100" v-bind:style="{ 'background-color': color_layout ? 'blue' : '' }">
-
-                                <div class="row p-2" style="height: 50%" v-bind:style="{ 'background-color': color_layout ? 'pink' : '' }">
-                                    <div class="col justify-content-center align-self-center h-100">
-                                        <b-img class="github-image" fluid-grow rounded="circle" src="https://github.com/MarcSM.png"></b-img>
-                                    </div>
-                                </div>
-
-                                <div class="row" style="height: 15%" v-bind:style="{ 'background-color': color_layout ? 'cyan' : '' }">
-                                    <div class="col justify-content-center align-self-center">
-                                        <h1 class="title contrast-shadow">
-                                            MarcSM
-                                        </h1>
-                                    </div>
-                                </div>
-
-                                <div class="row" style="height: 17.5%" v-bind:style="{ 'background-color': color_layout ? 'yellow' : '' }">
-                                    <div class="col justify-content-center align-self-center">
-                                        <h1 class="subtitle contrast-shadow">
-                                            <small>
-                                                Sound, Technology and Creativity
-                                            </small>
-                                        </h1>
-                                    </div>
-                                </div>
-
-                                <div class="row px-sm-5" style="height: 17.5%" v-bind:style="{ 'background-color': color_layout ? 'purple' : '' }">
-                                    <div class="col justify-content-center align-self-center">
-                                        <div class="row h-100 p-2 contrast-shadow">
-                                            <a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
-                                                <i class="fa fa-2x fa-github"></i>
-                                            </a>
-                                            <a class="col h-100 justify-content-center align-self-center" href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
-                                                <i class="fa fa-2x fa-linkedin"></i>
-                                            </a>
-                                            <a class="col h-100 justify-content-center align-self-center" href="https://www.instagram.com/_marcsm_/" target="_blank">
-                                                <i class="fa fa-2x fa-instagram"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- <div class="row text-center px-sm-5" style="background-color: white; height: 20% !important">
-                                    <div class="col text-center justify-content-center align-self-center h-100">
-                                        <p class="bio contrast-shadow">
-                                            Experienced in audio signal processing, games, sound design, software development and the world of music production.
-                                        </p>
-                                    </div>
-                                </div> -->
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <Footer/>
+        <!-- <footer/> -->
     </div>
 </template>
 
 <script>
-import Navigation from './components/navbar.vue'
-import Footer from './components/footer.vue'
+// import Navigation from './components/Navbar.vue'
+// import Footer from './components/Footer.vue'
+// import CustomHeader from './components/CustomHeader.vue'
 
 export default {
 
@@ -123,28 +72,40 @@ export default {
         }
     },
 
-    name: 'App',
+    // name: 'App',
   
-    components: {
-        Navigation,
-        Footer
-    }
+    // components: {
+    //     Navigation,
+    //     Footer
+    // }
 }
 </script>
 
 <style lang="scss">
-    html,
-    body {
-        font-family: "Roboto" !important;
+
+    $background-color: rgba(24, 26, 27, 1.0);
+    $section-color: rgba(30, 32, 33, 1.0);
+    $section-alternate-color: rgba(26, 28, 28, 1.0);
+
+    .background-color { background-color: $background-color;}
+    .section-color { background-color: $section-color;}
+    .section-alternate-color { background-color: $section-alternate-color;}
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    html, body {
+        font-family: 'Roboto', sans-serif;
+        // font-family: "Roboto" !important;
         -webkit-font-smoothing: antialiased;
         font-weight: normal;
         margin: 0;
         padding: 0;
-        color: rgba(255, 255, 255, 1.0);
-        background-color: rgba(24, 26, 27, 1.0) !important;
+        color: rgba(240, 240, 240, 1.0);
+        background-color: $background-color;
     }
     
     #app {
+        font-family: 'Roboto', sans-serif;
         position: relative;
     }
     
@@ -216,76 +177,18 @@ export default {
         // -ms-filter: blur(5px);
         // filter: blur(5px);
     }
-
-    // .marc-header
-    // {
-    //     width: 100%;
-    //     height: 100vh;
-    //     position: absolute;
-    //     top: 0;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     flex-direction: column;
-    //     color: rgba(255, 255, 255, 0.9)
-    // }
     
-    .title {
-        font-family: Avenir, Helvetica, Arial, sans-serif !important;
-        text-align: center;
-        // font-size: 7.45em;
-        // margin-bottom: 0;
-
-        // font-family: Teko, sans-serif;
-        // text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75);
-    }
-    
-    .subtitle {
-        font-family: Avenir, Helvetica, Arial, sans-serif !important;
-        text-align: center;
-        // padding: 1em;
-        // font-size: 2em;
-        // margin-bottom: 1em;
-    }
-
-    .contrast-shadow
-    {
-        text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75);
-    }
-
-    
-
-    // @media (min-width: 576px)
-    @media (min-width: 992px)
-    {
-        h1 {
-            font-size: 4rem !important;
-        }
-
-        .fa {
-            font-size: 4rem !important;
-        }
-
-        .bio {
-            // font-size: 1.5em;
-            // padding: 1em;
-        }
-    }
-
-
-    // .fa {
-    //     font-size: 2.5em;
-    //     // font-size: 2.5em;
-    //     // padding-left: 0.5em;
-    //     // padding-right: 0.5em;
-    // }
-
-    a {
-        color: rgba(255, 255, 255, 1.0);
+    a,
+    a:focus {
+        color: rgba(240, 240, 240, 1.0);
     }
 
     a:hover {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(240, 240, 240, 0.5);
+    }
+
+    .contrast-shadow {
+        text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     }
 
 </style>

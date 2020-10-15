@@ -31,7 +31,6 @@
     </div>
 </template>
 
-
 <style lang="scss">
 
   .footer-background {
