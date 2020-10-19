@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
+import vBlur from 'v-blur'
 import App from './App.vue'
 // import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -13,6 +14,7 @@ import FlatSurfaceShader from 'vue-flat-surface-shader'
 
 Vue.use(BootstrapVue)
 Vue.use(FlatSurfaceShader)
+Vue.use(vBlur)
     // Vue.use(VueDarkMode);
 
 // var tableActions = require('./components/tables/partials/Actions.vue')
