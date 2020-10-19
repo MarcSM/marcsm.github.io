@@ -23,17 +23,31 @@
 						<b-carousel-slide class="carousel-slide-projects">
 							
 							<template #img>
-								<img v-blur="{
-										isBlurred: true,
-										opacity: 1.0,
-										filter: 'blur(2px)',
-										transition: 'none'
-									}"
-									
-									
-									class="d-block w-100 h-100 img-fluid"
-									src="dist/img/projects/backgrounds/futuristic-technology-concept-gradient-background_23-2148338419.jpg"
-								>
+
+								<div v-blur="{
+									isBlurred: true,
+									opacity: 1.0,
+									filter: 'hue-rotate(325deg)',
+									transition: 'none'}">
+
+									<b-embed
+										v-blur="{
+											isBlurred: true,
+											opacity: 1.0,
+											filter: 'blur(8px)',
+											transition: 'all .1s linear'
+										}"
+										type="video"
+										aspect="4by3"
+										loop
+										muted
+										autoplay
+										style="width: auto; height: 100% !important;"
+										src="dist/img/projects/backgrounds/depositphotos_208213236-stock-video-4k-seamless-3d-abstract-animation.mp4">
+										<!-- poster="dist/img/projects/backgrounds/futuristic-technology-concept-gradient-background_23-2148338419.jpg" -->
+									</b-embed>
+								</div>
+								
 							</template>
 
 							<div class="row h-75">
@@ -67,15 +81,13 @@
 								<img v-blur="{
 										isBlurred: true,
 										opacity: 1.0,
-										filter: 'blur(7px)',
+										filter: 'blur(8px)',
 										transition: 'all .1s linear'
 									}"
-									
-									
 									class="d-block w-100 h-100 img-fluid"
-									src="dist/img/projects/backgrounds/vania-shows-N1I6IgDOGJs-unsplash.jpg"
-								>
+									src="dist/img/projects/backgrounds/vania-shows-N1I6IgDOGJs-unsplash.jpg">
 							</template>
+							<!-- class="col d-block w-100 h-100 img-fluid" -->
 							
 							<div class="row h-75">
 								<b-img class="mh-100" src="dist/img/projects/plugins/essentials/ladder-filter.png" fluid center alt="LadderFilter"></b-img>
@@ -104,15 +116,22 @@
 						<b-carousel-slide class="carousel-slide-projects">
 
 							<template #img>
-								<img v-blur="{
+								<b-embed
+									v-blur="{
 										isBlurred: true,
 										opacity: 1.0,
-										filter: 'blur(20px)',
+										filter: 'blur(8px)',
 										transition: 'all .1s linear'
 									}"
-									class="d-block w-100 h-100 img-fluid"
-									src="dist/img/projects/backgrounds/4k-red-abstract-waves-3d-art-abstract-art-red-wavy-background-besthqwallpapers.com-1920x1080.jpg"
-								>
+									type="video"
+									aspect="4by3"
+									loop
+									muted
+									autoplay
+									style="width: auto; height: 100% !important;"
+									src="dist/img/projects/backgrounds/depositphotos_185107844-stock-video-dark-red-abstract-moving-background.mp4">
+									<!-- poster="dist/img/projects/backgrounds/802192.jpg" -->
+								</b-embed>
 							</template>
 							
 							<div class="row h-75">
@@ -297,7 +316,7 @@
 	}
 
 	#projects-carousel .carousel-item {
-		height: 50vw;
+		height: 44vw;
 	}
 
 	#projects-carousel .carousel-title {
