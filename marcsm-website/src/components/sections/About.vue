@@ -1,6 +1,6 @@
 <template>
-	<section id="about" :class="background_color" v-bind:style="{ 'padding': navigation_height + 'px'}">
-		<div class="container-fluid">
+	<section id="about" :class="background_color" v-bind:style="{ 'padding-top': navigation_height + 'px', 'padding-bottom': navigation_height + 'px'}">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<h2 class="section-heading">About</h2>

@@ -20,19 +20,24 @@
         
         <navigation class="navigation" :height="navigation_height"></navigation>
 
-        <section-about
-            :navigationHeight="navigation_height"
-            backgroundColor="section-color">
-        </section-about>
+        <!-- <div class="container"> -->
 
-        <section-projects
-            :navigationHeight="navigation_height"
-            backgroundColor="section-alternate-color">
-        </section-projects>
+            <section-about
+                :navigationHeight="navigation_height"
+                backgroundColor="section-color">
+            </section-about>
+
+            <section-projects
+                :navigationHeight="navigation_height"
+                backgroundColor="section-alternate-color">
+            </section-projects>
         
+        <!-- </div> -->
+
         <custom-footer></custom-footer>
 
         <!-- <footer/> -->
+
     </div>
 </template>
 
@@ -87,6 +92,10 @@ export default {
     $section-color: rgba(30, 32, 33, 1.0);
     $section-alternate-color: rgba(26, 28, 28, 1.0);
 
+    .bg-new-dark { background-color: $background-color;}
+    .bg-section-dark { background-color: $section-color;}
+    .bg-section-alternate-dark { background-color: $section-alternate-color;}
+    
     .background-color { background-color: $background-color;}
     .section-color { background-color: $section-color;}
     .section-alternate-color { background-color: $section-alternate-color;}
