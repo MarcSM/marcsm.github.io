@@ -15,7 +15,7 @@
 							
 							<div class="row text-center" v-bind:style="{ height: 'calc(100% - ' + navigation_height + 'px)' }">
 								
-								<div class="col d-flex flex-column h-100" v-bind:style="{ 'background-color': color_layout ? 'blue' : '' }">
+								<div class="col d-flex flex-column h-100 pb-3" v-bind:style="{ 'background-color': color_layout ? 'blue' : '' }">
 
 									<div class="row p-2" style="height: 50%" v-bind:style="{ 'background-color': color_layout ? 'pink' : '' }">
 										<div class="col justify-content-center align-self-center h-100">
@@ -43,13 +43,13 @@
 										<div class="col justify-content-center align-self-center">
 											<div class="row h-100 p-2">
 												<a class="col h-100 justify-content-center align-self-center" href="http://github.com/MarcSM" target="_blank">
-													<i class="fab fa-5x fa-github"></i>
+													<i class="fab fa-4x fa-github"></i>
 												</a>
 												<a class="col h-100 justify-content-center align-self-center" href="https://www.linkedin.com/in/marc-sanchez-martinez/" target="_blank">
-													<i class="fab fa-5x fa-linkedin"></i>
+													<i class="fab fa-4x fa-linkedin"></i>
 												</a>
 												<a class="col h-100 justify-content-center align-self-center" href="https://www.instagram.com/_marcsm_/" target="_blank">
-													<i class="fab fa-5x fa-instagram"></i>
+													<i class="fab fa-4x fa-instagram"></i>
 												</a>
 											</div>
 										</div>
