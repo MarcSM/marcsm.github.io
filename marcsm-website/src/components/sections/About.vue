@@ -9,7 +9,7 @@
 					</h3>
 					<br>
 					<p class="text-justify">
-						A passionate of music and graphic design; I have done several own music productions and collaborations, as well as the sound of films and audiovisual content. I have skill and fluidity to talk in public, high communication skills and conviction. I am working very hard to be the best Sound Tech Researcher / Audio Software Developer you can find.
+						A passionate of music and graphic design; I have done several own music productions and collaborations, as well as the sound of audiovisual content. I have skill and fluidity to talk in public, high communication skills and conviction. I am working very hard to be the best Sound Tech Researcher / Audio Software Developer you can find.
 					</p>
 					<p class="text-justify">
 						With more than 5 years of experience in the software development industry. I have worked with C ++, Python, Matlab and C# among others. And SDKs I worked with: JUCE, Steinberg's VST SDK, .NET, Entity Framework, Laravel, Vue, Bootstrap and many more. I programmed a game in C ++ back in the university using the SDL library mainly, and my final year project was to program a game engine in C++. My passions though had always been audio signal processing, sound design and music production. I am working developing tools to help musicians and artists around the world on their creative process and to express themselves using these tools.
@@ -70,28 +70,5 @@
 </script>
 
 <style lang="scss">
-
-	.title {
-		// font-family: Avenir, Helvetica, Arial, sans-serif;
-		font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-        text-align: center;
-        font-size: 8em;
-        // margin-bottom: 0;
-
-        // font-family: Teko, sans-serif;
-        // text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.75);
-    }
-    
-    .subtitle {
-		// font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        text-align: center;
-		font-size: 3em;
-		white-space: nowrap;
-    	overflow: hidden;
-    	text-overflow: ellipsis;
-        // padding: 1em;
-        // margin-bottom: 1em;
-	}
 	
 </style>

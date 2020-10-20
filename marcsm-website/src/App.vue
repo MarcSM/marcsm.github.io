@@ -13,12 +13,12 @@
             <div class="vignette"></div>
         </div>
 
+        <navigation class="navigation" :height="navigation_height"></navigation>
+
         <custom-header
             :navigationHeight="navigation_height"
             :colorLayout="color_layout">
         </custom-header>
-        
-        <navigation class="navigation" :height="navigation_height"></navigation>
 
         <!-- <div class="container"> -->
 

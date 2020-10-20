@@ -116,12 +116,27 @@
 		// font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
         font-family: Avenir, Helvetica, Arial, sans-serif;
         text-align: center;
-		font-size: 3em;
+		font-size: 2.25em;
 		white-space: nowrap;
     	overflow: hidden;
     	text-overflow: ellipsis;
         // padding: 1em;
         // margin-bottom: 1em;
 	}
-	
+
+	// // Small devices (landscape phones, less than 768px)
+	// @media (max-width: 767.98px) {
+
+	// Extra small devices (portrait phones, less than 576px)
+	@media (max-width: 575.98px) {
+		
+		.title {
+			font-size: 20vw;
+		}
+
+		.subtitle {
+			font-size: 6vw;
+		}
+	}
+		
 </style>

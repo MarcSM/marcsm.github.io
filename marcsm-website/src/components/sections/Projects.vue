@@ -15,7 +15,7 @@
 					<b-carousel
 						id="projects-carousel"
 						v-model="slide"
-						:interval="40000"
+						:interval="8000"
 						controls
 						@sliding-start="onSlideStart"
 						@sliding-end="onSlideEnd">
@@ -65,7 +65,7 @@
 
 									<b-row class="h-50 carousel-subtitle">
 										<b-col>
-											<span>An open source Spectral Morphing Synthesizer</span>
+											<span>Open source Spectral Morphing Synthesizer</span>
 										</b-col>
 									</b-row>
 									
@@ -149,7 +149,7 @@
 
 									<b-row class="h-50 carousel-subtitle">
 										<b-col>
-											<span>An Artificial Intelligence distortion unit</span>
+											<span>Artificial Intelligence distortion unit</span>
 										</b-col>
 									</b-row>
 									

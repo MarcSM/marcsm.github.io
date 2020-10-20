@@ -1,55 +1,23 @@
 <template>
 	<div>
-		<b-navbar class="navbar-fixed-top background-color" toggleable="md" type="default fixed-top">
-			<!-- <div class="container-fluid"> -->
-				<!-- <div class="navbar-header page-scroll"> -->
+		<b-navbar toggleable="md" type="default fixed-top">
+			<div class="container-fluid">
+			<!-- <b-navbar toggleable="md" type="dark fixed-top"> -->
+				
+				<b-navbar-brand class="page-scroll" href="#page-top">MarcSM</b-navbar-brand>
 
-					<b-navbar-brand class="navbar-brand page-scroll" href="#page-top">
-						<!-- <img class="logo" src="dist/img/logos/medievalroutes/logo3BC.png">&nbsp;&nbsp;-->
-						MarcSM
-					</b-navbar-brand>
+				<b-navbar-toggle target="nav-collapse-menu"></b-navbar-toggle>
 
-					<!-- <b-navbar-toggle target="nav_collapse"></b-navbar-toggle> -->
-
-					<b-button v-b-toggle.collapse-1 variant="primary" type="button" class="navbar-toggle" data-toggle="collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-					</b-button>
-
-					
-
-				<!-- </div> -->
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<b-collapse id="collapse-1" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="hidden">
-							<a href="#page-top"></a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#about">about</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#projects">projects</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#cv">cv</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#contact">contact</a>
-						</li>
-						<!-- TODO <li>
-								<select class="btn btn-lang" onChange="window.location.href=this.value">
-									<option value="?lg=ca">Catal&agrave;</option>
-									<option value="?lg=es">Castell&agrave;</option>
-									<option value="?lg=en">Angl&eacute;s</option>
-								</select>
-						</li> -->
-					</ul>
+				<b-collapse id="nav-collapse-menu" is-nav>
+					<b-navbar-nav class="ml-auto custom-dropdown-menus" id="nav-nav">
+						<b-nav-item href="#about">about</b-nav-item>
+						<b-nav-item href="#projects">projects</b-nav-item>
+						<b-nav-item href="#cv">cv</b-nav-item>
+						<b-nav-item href="#contact">contact</b-nav-item>
+					</b-navbar-nav>
 				</b-collapse>
-			<!-- </div> -->
+				
+			</div>
 		</b-navbar>
 	</div>
 </template>
@@ -72,6 +40,7 @@
 <style lang="scss">
 
 	$background-color: rgba(24, 26, 27, 1.0);
+
 	$primary-color: rgb(80, 80, 80);
 	$primary-color-hover: mix($primary-color, #000000, 75);
 	// $primary-color-hover: #fec503;
@@ -90,27 +59,19 @@
 	// @media (max-width: 767.98px)
 	@media (max-width: 575.98px)
 	{
-		.navbar-color {
-			// background-color: rgba(0, 0, 0, 0.4) !important;
-
+		.navbar-color
+		{
 			-webkit-backdrop-filter: blur(5px);
 			-moz-backdrop-filter: blur(5px);
 			-o-backdrop-filter: blur(5px);
 			-ms-backdrop-filter: blur(5px);
 			backdrop-filter: blur(5px);
-
-			// -webkit-filter: blur(5px);
-			// -moz-filter: blur(5px);
-			// -o-filter: blur(5px);
-			// -ms-filter: blur(5px);
-			// filter: blur(5px);
 		}
 	}
 
 	.navbar-default
 	{
 		border-color: transparent;
-		// background-color: #222;
 		background-color: $background-color;
 	}
 
@@ -118,6 +79,36 @@
 	{
 		font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 		color: $logo-color;
+	}
+
+	// Medium devices (tablets, 768px and up)
+	@media (min-width: 768px)
+	{
+		.navbar-default
+		{
+				padding: 1em;
+				border: 0;
+				background-color: transparent;
+				-webkit-transition: padding .3s;
+				-moz-transition: padding .3s;
+				transition: padding .3s;
+		}
+		.navbar-default .navbar-brand {
+				font-size: 2em;
+				-webkit-transition: all .3s;
+				-moz-transition: all .3s;
+				transition: all .3s;
+		}
+		.navbar-default .navbar-nav>.active>a {
+				border-radius: 3px;
+		}
+		.navbar-default.navbar-shrink {
+				padding: 10px 0;
+				background-color: $background-color;;
+		}
+		.navbar-default.navbar-shrink .navbar-brand {
+				font-size: 1.5em;
+		}
 	}
 
 	.navbar-default .navbar-brand:hover,
@@ -196,6 +187,19 @@
 		.navbar-default.navbar-shrink .navbar-brand {
 				font-size: 1.5em;
 		}
+	}
+
+	.navbar-default .navbar-toggler-icon
+	{
+		color: $logo-color;
+		display: inline-block;
+		width: 1.5em;
+		height: 1.5em;
+		vertical-align: middle;
+		content: "";
+		background: no-repeat center center;
+		background-size: 100% 100%;
+		background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28238, 238, 238, 1.0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 	}
 
 	.logo
