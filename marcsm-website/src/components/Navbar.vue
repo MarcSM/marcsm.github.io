@@ -1,39 +1,63 @@
 <template>
-	<div>
-		<b-navbar toggleable="md" type="default fixed-top">
+	<!-- <div> -->
+		<!-- <b-navbar v-b-scrollspy="100" toggleable="md" type="default fixed-top" v-bind:style="{ 'height': navigation_height + 'px'}"> -->
+		<b-navbar v-b-scrollspy toggleable="md" type="default fixed-top">
 			<div class="container-fluid">
-			<!-- <b-navbar toggleable="md" type="dark fixed-top"> -->
 				
 				<b-navbar-brand class="page-scroll" href="#page-top">MarcSM</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse-menu"></b-navbar-toggle>
 
 				<b-collapse id="nav-collapse-menu" is-nav>
-					<b-navbar-nav class="ml-auto custom-dropdown-menus" id="nav-nav">
+					<b-navbar-nav class="ml-auto custom-dropdown-menus">
 						<b-nav-item href="#about">about</b-nav-item>
 						<b-nav-item href="#projects">projects</b-nav-item>
-						<b-nav-item href="#cv">cv</b-nav-item>
-						<b-nav-item href="#contact">contact</b-nav-item>
+						<b-nav-item href="#cv" disabled>cv</b-nav-item>
+						<b-nav-item href="#contact" disabled>contact</b-nav-item>
 					</b-navbar-nav>
 				</b-collapse>
 				
 			</div>
 		</b-navbar>
-	</div>
+	<!-- </div> -->
 </template>
 
 <script>
 
-		export default {
+	export default
+	{
+	props:
+		{
+			navigationHeight:
+			{
+				type: Number,
+				default: 56
+			}
+		},
 
-			props: ['navigationHeight'],
+		data() {
+			return {
+				navigation_height: this.navigationHeight
+			}
+		},
 
-				data () {
-						return {
-								navigation_height: this.navigationHeight
-						}
-				},
+		mounted()
+		{
+
+			// var offset = this.navigation_height;
+
+			// $('.navbar').scrollspy({offest: 70});
+
+			// $('.navbar li a, .nav-scroll-margin').click(function(event)
+			// {
+			//     // var offset = $('.navbar').height();
+			//     event.preventDefault();
+			//     $($(this).attr('href'))[0].scrollIntoView({ behavior: 'smooth'});
+			//     // $($(this).attr('href'))[0].scrollIntoView();
+			//     scrollBy(0, -offset);
+			// });
 		}
+	}
 
 </script>
 
@@ -49,6 +73,21 @@
 	$logo-color: #eee;
 	$logo-color-hover: mix($logo-color, #000000, 75);
 	$test-color: #FF0000;
+
+// 	.navbar {
+//         position: fixed;
+//         top: 0;
+//         right: 0;
+//         left: 0;
+//         z-index: 1030;
+//         width: 100%;
+//         -webkit-animation: .95s ease-in-out 0s normal none 1 running fadeInDown;
+//         animation: .95s ease-in-out 0s normal none 1 running fadeInDown;
+//         -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+//         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+//         -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+//         box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+// }
 
 	.navbar-color
 	{

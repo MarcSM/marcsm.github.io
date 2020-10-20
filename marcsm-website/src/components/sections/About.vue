@@ -1,5 +1,5 @@
 <template>
-	<section id="about" :class="background_color" v-bind:style="{ 'padding-top': navigation_height + 'px', 'padding-bottom': navigation_height + 'px'}">
+	<section id="about" :class="background_color" :style="{ 'padding-top': navigation_height + 'px', 'padding-bottom': navigation_height + 'px'}">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">

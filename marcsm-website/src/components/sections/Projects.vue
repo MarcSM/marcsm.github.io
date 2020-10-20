@@ -14,11 +14,8 @@
 				<div class="col">
 					<b-carousel
 						id="projects-carousel"
-						v-model="slide"
 						:interval="8000"
-						controls
-						@sliding-start="onSlideStart"
-						@sliding-end="onSlideEnd">
+						controls>
 
 						<b-carousel-slide class="carousel-slide-projects">
 							

@@ -1,8 +1,5 @@
 <template>
-  <div>
-  <!-- <div id="app"> -->
-      
-      
+    <div>
         <div id="page-top" class="mask">
             
             <flat-surface-shader class="shader" type="webgl"
@@ -13,7 +10,7 @@
             <div class="vignette"></div>
         </div>
 
-        <navigation class="navigation" :height="navigation_height"></navigation>
+        <navigation :navigationHeight="navigation_height"></navigation>
 
         <custom-header
             :navigationHeight="navigation_height"
@@ -35,9 +32,6 @@
         <!-- </div> -->
 
         <custom-footer></custom-footer>
-
-        <!-- <footer/> -->
-
     </div>
 </template>
 
@@ -51,7 +45,8 @@ export default {
     data() {
         return {
             color_layout: false,
-            navigation_height: 56,
+            navigation_height: 66,
+            // navigation_height: 56,
             fss_back: {
                 mesh: {
                     ambient: '#555555',
@@ -76,6 +71,37 @@ export default {
             }
         }
     },
+
+    mounted()
+    {
+
+        // var offset = this.navigation_height;
+
+        // // $('.navbar').scrollspy({offest: 70});
+
+        // $('.navbar li a, .nav-scroll-margin').click(function(event)
+        // {
+        //     // var offset = $('.navbar').height();
+        //     event.preventDefault();
+        //     // $($(this).attr('href'))[0].scrollIntoView({ behavior: 'smooth'});
+        //     $($(this).attr('href'))[0].scrollIntoView();
+        //     scrollBy(0, -offset);
+        // });
+    },
+
+    methods: {
+		// Convenience method to scroll a heading into view.
+			// Not required for scrollspy to work
+			scrollIntoView(evt) {
+				alert("lol1");
+				evt.preventDefault()
+				const href = evt.target.getAttribute('href')
+				const el = href ? document.querySelector(href) : null
+				if (el) {
+				this.$refs.content.scrollTop = el.offsetTop
+				}
+			}
+		}
 
     // name: 'App',
   

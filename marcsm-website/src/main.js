@@ -2,6 +2,10 @@ import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import vBlur from 'v-blur'
 import App from './App.vue'
+
+// import VBScrollspyPlugin from 'bootstrap-vue'
+// Vue.use(VBScrollspyPlugin)
+
 // import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -11,6 +15,10 @@ import FlatSurfaceShader from 'vue-flat-surface-shader'
 // import VueDarkMode from "@growthbunker/vuedarkmode";
 
 // Vue.component('VueStar', VueStar)
+
+try {
+    window.$ = window.jQuery = require('jquery');
+} catch (e) {}
 
 Vue.use(BootstrapVue)
 Vue.use(FlatSurfaceShader)

@@ -58,7 +58,8 @@
 									<div class="row px-5" style="height: 12.5%" v-bind:style="{ 'background-color': color_layout ? 'purple' : '' }">
 										<div class="col justify-content-center align-self-center">
 											<div class="row h-100 p-2">
-												<a href="#about" target="_blank" class="page-scroll col h-100 justify-content-center align-self-center" style="color: rgba(200, 200, 200, 0.75);">
+												<!-- <a href="#about" class="page-scroll col h-100 justify-content-center align-self-center nav-scroll-margin" style="color: rgba(200, 200, 200, 0.75);"> -->
+												<a href="#about" class="col h-100 justify-content-center align-self-center nav-scroll-margin" style="color: rgba(200, 200, 200, 0.75);">
 													<i class="fa fa-4x fa-arrow-circle-down"></i>
 												</a>
 											</div>
