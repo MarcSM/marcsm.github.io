@@ -39,6 +39,7 @@
 										loop
 										muted
 										autoplay
+										crossorigin="anonymous"
 										style="width: auto; height: 100% !important;"
 										src="dist/img/projects/backgrounds/depositphotos_208213236-stock-video-4k-seamless-3d-abstract-animation.mp4">
 										<!-- poster="dist/img/projects/backgrounds/futuristic-technology-concept-gradient-background_23-2148338419.jpg" -->
@@ -125,6 +126,7 @@
 									loop
 									muted
 									autoplay
+									crossorigin="anonymous"
 									style="width: auto; height: 100% !important;"
 									src="dist/img/projects/backgrounds/depositphotos_185107844-stock-video-dark-red-abstract-moving-background.mp4">
 									<!-- poster="dist/img/projects/backgrounds/802192.jpg" -->

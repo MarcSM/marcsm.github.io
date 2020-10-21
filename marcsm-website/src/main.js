@@ -18,6 +18,7 @@ import FlatSurfaceShader from 'vue-flat-surface-shader'
 
 try {
     window.$ = window.jQuery = require('jquery');
+
 } catch (e) {}
 
 Vue.use(BootstrapVue)
