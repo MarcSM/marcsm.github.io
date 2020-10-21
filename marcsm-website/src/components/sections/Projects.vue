@@ -55,13 +55,13 @@
 							<div class="row h-25">
 								<b-col class="h-100">
 								
-									<b-row class="h-50 carousel-title">
+									<b-row class="carousel-title">
 										<b-col>
 											<span>Morphex</span>
 										</b-col>
 									</b-row>
 
-									<b-row class="h-50 carousel-subtitle">
+									<b-row class="carousel-subtitle">
 										<b-col>
 											<span>Open source Spectral Morphing Synthesizer</span>
 										</b-col>
@@ -94,13 +94,13 @@
 							<div class="row h-25">
 								<b-col class="h-100">
 								
-									<b-row class="h-50 carousel-title">
+									<b-row class="carousel-title">
 										<b-col>
 											<span>Essentials</span>
 										</b-col>
 									</b-row>
 
-									<b-row class="h-50 carousel-subtitle">
+									<b-row class="carousel-subtitle">
 										<b-col>
 											<span>FX plugins collection for use with any DAW</span>
 										</b-col>
@@ -140,13 +140,13 @@
 							<div class="row h-25">
 								<b-col class="h-100">
 								
-									<b-row class="h-50 carousel-title">
+									<b-row class="carousel-title">
 										<b-col>
 											<span>Slayer</span>
 										</b-col>
 									</b-row>
 
-									<b-row class="h-50 carousel-subtitle">
+									<b-row class="carousel-subtitle">
 										<b-col>
 											<span>Artificial Intelligence distortion unit</span>
 										</b-col>
@@ -294,8 +294,7 @@
 
 </script>
 
-<style lang="scss">	
-
+<style lang="scss">
 	.carousel-inner > .active {
 		outline:0;
 	}
@@ -315,15 +314,49 @@
 	}
 
 	#projects-carousel .carousel-item {
-		height: 44vw;
+		height: 30vw;
 	}
 
 	#projects-carousel .carousel-title {
-		font-size: 4vw;
+		font-size: 3.5vw;
+		height: 60% !important;
 	}
 
 	#projects-carousel .carousel-subtitle {
-		font-size: 2.5vw;
+		font-size: 2vw;
+		height: 40% !important;
+	}
+
+	// Medium devices (tablets, less than 992px)
+	@media (max-width: 1199.98px)
+	{
+		#projects-carousel .carousel-item {
+			height: 40vw;
+		}
+
+		#projects-carousel .carousel-title {
+			font-size: 4vw;
+		}
+
+		#projects-carousel .carousel-subtitle {
+			font-size: 2.5vw;
+		}
+	}
+
+	// Small devices (landscape phones, less than 768px)
+	@media (max-width: 767.98px)
+	{
+		#projects-carousel .carousel-item {
+			height: 50vw;
+		}
+	}
+
+	// Extra small devices (portrait phones, less than 576px)
+	@media (max-width: 575.98px)
+	{
+		#projects-carousel .carousel-item {
+			height: 66vw;
+		}
 	}
 
 	// .carousel-indicators {
