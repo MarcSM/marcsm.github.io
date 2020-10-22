@@ -5,7 +5,7 @@
 				<div class="col-lg-12 text-center">
 					<h2 class="section-heading">Projects</h2>
 					<h3 class="section-subheading text-muted">
-						Take a look at some of the projects I have worked on
+						Take a look at some of the projects I've worked on
 					</h3>
 				</div>
 			</div>
@@ -164,11 +164,11 @@
 
 			</br>
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col text-center">
 					<b-button href="plugins">All Plugins</b-button>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 </template>

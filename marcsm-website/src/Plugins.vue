@@ -9,9 +9,15 @@
             
             <div class="vignette"></div>
         </div> -->
-asdas
 
-        <div class="container-fluid">
+        <!-- <div class="container-fluid"> -->
+        <div>
+
+            <div overlay class="container text-center p-10">
+                <!-- <h1>Plugins</h1> -->
+                <!-- <p>Take a look at some of the projects I have worked on</p> -->
+            </div>
+
             <b-img
                     v-blur="{
                         isBlurred: true,
@@ -20,16 +26,13 @@ asdas
                         transition: 'none'
                     }"
                     blank-color="#000"
-                    
+                    overlay
                     center
                     fluid-grow src="dist/img/projects/backgrounds/ableton_wallpaper.png">
                     
                 </b-img>
 
-            <div class="container text-center p-10">
-                <h1>Bootstrap Tutorial</h1>      
-                <p>Take a look at some of the projects I have worked on</p>
-            </div>
+            
         </div>
 
         <!-- <div style="height: 500px; overflow: hidden">

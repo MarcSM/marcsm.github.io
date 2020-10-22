@@ -119,7 +119,7 @@
 	{
 		border-color: transparent;
 		background-color: $background-color;
-		background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .1) 75%, transparent 100%);
+		// background: linear-gradient(to bottom, transparent 100%, transparent 100%);
 	}
 
 	.navbar-default .navbar-brand
@@ -135,7 +135,8 @@
 		{
 				padding: 1em;
 				border: 0;
-				background-color: transparent;
+				// background-color: transparent;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .1) 75%, transparent 100%);
 				-webkit-transition: padding .3s;
 				-moz-transition: padding .3s;
 				transition: padding .3s;
@@ -151,7 +152,7 @@
 		}
 		.navbar-default.navbar-shrink {
 				padding: 10px 0;
-				background-color: $background-color;;
+				background-color: $background-color;
 		}
 		.navbar-default.navbar-shrink .navbar-brand {
 				font-size: 1.5em;
