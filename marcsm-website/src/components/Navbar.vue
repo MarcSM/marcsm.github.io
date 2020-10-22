@@ -2,13 +2,14 @@
 	<!-- <div> -->
 		<!-- <b-navbar v-b-scrollspy="100" toggleable="md" type="default fixed-top" v-bind:style="{ 'height': navigation_height + 'px'}"> -->
 		<b-navbar v-b-scrollspy toggleable="md" type="default fixed-top">
+
 			<div class="container-fluid">
 				
-				<b-navbar-brand class="page-scroll" href="#page-top">MarcSM</b-navbar-brand>
+				<b-navbar-brand class="page-scroll" :href="[ $route.path == '/' ? '#page-top' : '/']">MarcSM</b-navbar-brand>
 
 				<b-navbar-toggle target="nav-collapse-menu"></b-navbar-toggle>
 
-				<b-collapse id="nav-collapse-menu" is-nav>
+				<b-collapse v-if="$route.path == '/'" id="nav-collapse-menu" is-nav>
 					<b-navbar-nav class="ml-auto custom-dropdown-menus">
 						<b-nav-item href="#about">about</b-nav-item>
 						<b-nav-item href="#projects">projects</b-nav-item>
@@ -39,6 +40,12 @@
 			return {
 				navigation_height: this.navigationHeight
 			}
+		},
+
+		methods: {
+			// isHomePage() {
+			// 	return this.$route.path == '/';
+			// }
 		},
 
 		mounted()
@@ -112,6 +119,7 @@
 	{
 		border-color: transparent;
 		background-color: $background-color;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .25) 50%, rgba(0, 0, 0, .1) 75%, transparent 100%);
 	}
 
 	.navbar-default .navbar-brand

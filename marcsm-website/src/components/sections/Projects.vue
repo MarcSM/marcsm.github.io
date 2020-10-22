@@ -156,110 +156,17 @@
 							</div>
 
 						</b-carousel-slide>
-
-						
-
-						
 					</b-carousel>
-	<!-- 
-						<b-carousel-slide
-							img-src="https://image.freepik.com/free-vector/futuristic-technology-concept-gradient-background_23-2148338419.jpg">
 
-							<b-container-fluid>
-
-								<b-row class="h-80">
-									<b-col>
-										<b-img src="dist/img/projects/plugins/morphex.png" flow-grow alt="Morphex"></b-img>
-									</b-col>
-								</b-row>
-
-								<b-row class="h-10">
-									<b-col>
-										<h3>Morphex</h3>
-									</b-col>
-								</b-row>
-
-								<b-row class="h-10">
-									<b-col>
-										<h4>An open source spectral morphing synthesizer</h4>
-									</b-col>
-								</b-row>
-								
-							</b-container-fluid>
-						</b-carousel-slide> -->
-
-						<!-- <b-carousel-slide img-src="https://image.freepik.com/free-vector/futuristic-technology-concept-gradient-background_23-2148338419.jpg">
-
-							<b-container-fluid>
-								<b-row>
-									<b-col>1 of 2</b-col>
-									<b-col>2 of 2</b-col>
-								</b-row>
-
-								<b-row>
-									<b-col>1 of 3</b-col>
-									<b-col>2 of 3</b-col>
-									<b-col>3 of 3</b-col>
-								</b-row>
-							</b-container-fluid>
-
-							<b-img src="dist/img/projects/plugins/morphex.png" fluid alt="Morphex"></b-img>
-							<h3>Morphex</h3>
-							<h4>An open source spectral morphing synthesizer</h4>
-						</b-carousel-slide> -->
-
-						<!-- https://s3-ap-southeast-2.amazonaws.com/hgturf.com.au--wp-offload/app/uploads/2016/08/18160527/kikuyusmaller.jpg -->
-
-						<!-- <b-carousel-slide
-							caption="Essentials"
-							text="An open source spectral morphing synthesizer"
-							img-src="dist/img/projects/plugins/essentials/ladder-filter.png">
-						</b-carousel-slide> -->
-
-						<!-- Slides with custom text -->
-						<!-- <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-						<h1>Hello world!</h1>
-						</b-carousel-slide> -->
-
-						<!-- Slides with image only -->
-						<!-- <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide> -->
-
-						<!-- Slides with img slot -->
-						<!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-						<!-- <b-carousel-slide>
-						<template #img>
-							<img
-							class="d-block img-fluid w-100"
-							width="1024"
-							height="480"
-							src="https://picsum.photos/1024/480/?image=55"
-							alt="image slot"
-							>
-						</template>
-						</b-carousel-slide> -->
-
-						<!-- Slide with blank fluid image to maintain slide aspect ratio -->
-						<!-- <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-							a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-						</p>
-						</b-carousel-slide> -->
 					
-					<!-- <b-card-group deck>
-						<b-card bg-variant="section-dark" text-variant="white" title="Card Title">
-						<b-card-text>
-							With supporting text below as a natural lead-in to additional content.
-						</b-card-text>
-						<b-button href="#" variant="primary">Go somewhere</b-button>
-						</b-card>
-						<b-card bg-variant="section-dark" text-variant="white" title="Card Title">
-						<b-card-text>
-							With supporting text below as a natural lead-in to additional content.
-						</b-card-text>
-						<b-button href="#" variant="primary">Go somewhere</b-button>
-						</b-card>
-					</b-card-group> -->
+				</div>
+			</div>
+
+			</br>
+
+			<div class="row">
+				<div class="col text-center">
+					<b-button href="plugins">All Plugins</b-button>
 				</div>
 			</div>
 		</div>

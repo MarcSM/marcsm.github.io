@@ -16,6 +16,8 @@
                 <h5>Projects</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Morphex</a></li>
+                    <li><a class="text-muted" href="#">Essentials</a></li>
+                    <li><a class="text-muted" href="#">Slayer</a></li>
                 </ul>
                 </div>
                 <div class="col-6 col-md">

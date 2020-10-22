@@ -2,6 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import vBlur from 'v-blur'
 import App from './App.vue'
+import Router from 'vue-router';
 
 // import VBScrollspyPlugin from 'bootstrap-vue'
 // Vue.use(VBScrollspyPlugin)
@@ -28,6 +29,11 @@ Vue.use(vBlur)
 
 // var tableActions = require('./components/tables/partials/Actions.vue')
 
+// Pages
+Vue.component('home', require('./Home.vue').default);
+Vue.component('plugins', require('./Plugins.vue').default);
+
+// Components
 Vue.component('custom-header', require('./components/CustomHeader.vue').default);
 Vue.component('navigation', require('./components/Navbar.vue').default);
 Vue.component('custom-footer', require('./components/Footer.vue').default);
@@ -35,6 +41,55 @@ Vue.component('custom-footer', require('./components/Footer.vue').default);
 // Sections
 Vue.component('section-about', require('./components/sections/About.vue').default);
 Vue.component('section-projects', require('./components/sections/Projects.vue').default);
+
+// Routes
+Vue.use(Router);
+
+import Home from './Home.vue';
+import Plugins from './Plugins.vue';
+
+const router = new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [{
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/plugins',
+            name: 'plugins',
+            component: Plugins
+        }
+        // {
+        //     path: '/about',
+        //     name: 'about',
+        //     component: () =>
+        //         import ('./views/About.vue'),
+        //     meta: {
+        //         authRequired: true
+        //     }
+        // },
+        // {
+        //     path: '/menu',
+        //     name: 'menu',
+        //     component: () =>
+        //         import ('./views/Menu.vue')
+        // },
+        // {
+        //     path: '/sign-in',
+        //     name: 'signin',
+        //     component: () =>
+        //         import ('./views/Signin.vue')
+        // },
+        // {
+        //     path: '/join',
+        //     name: 'join',
+        //     component: () =>
+        //         import ('./views/Join.vue')
+        // }
+    ]
+});
 
 // import navigation from './components/Navbar.vue'
 // import Footer from './components/Footer.vue'
@@ -64,5 +119,6 @@ Vue.config.devtools = true;
 // });
 
 new Vue({
+    router,
     render: h => h(App)
 }).$mount('#app')

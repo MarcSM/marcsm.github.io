@@ -1,44 +1,16 @@
 <template>
     <div>
-        <div id="page-top" class="mask">
-            
-            <flat-surface-shader class="shader" type="webgl"
-                            :mesh="fss_back.mesh"
-                            :light="fss_back.light">
-            </flat-surface-shader>
-            
-            <div class="vignette"></div>
-        </div>
 
         <navigation :navigationHeight="navigation_height"></navigation>
 
-        <custom-header
-            :navigationHeight="navigation_height"
-            :colorLayout="color_layout">
-        </custom-header>
-
-        <!-- <div class="container"> -->
-
-            <section-about
-                :navigationHeight="navigation_height"
-                backgroundColor="section-color">
-            </section-about>
-
-            <section-projects
-                :navigationHeight="navigation_height"
-                backgroundColor="section-alternate-color">
-            </section-projects>
-        
-        <!-- </div> -->
+        <router-view></router-view>
+        <!-- <home></home> -->
 
         <custom-footer></custom-footer>
     </div>
 </template>
 
 <script>
-// import Navigation from './components/Navbar.vue'
-// import Footer from './components/Footer.vue'
-// import CustomHeader from './components/CustomHeader.vue'
 
 export default {
 
@@ -138,6 +110,7 @@ export default {
 
 <style lang="scss">
 
+    $primary-color: rgb(80, 80, 80);
     $background-color: rgba(24, 26, 27, 1.0);
     $section-color: rgba(30, 32, 33, 1.0);
     $section-alternate-color: rgba(26, 28, 28, 1.0);
@@ -248,6 +221,18 @@ export default {
 
     .contrast-shadow {
         text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-secondary {
+        color: #fff;
+        background-color: transparent;
+        border-color: #6c757d;
+    }
+
+    .btn-secondary {
+        color: #fff;
+        background-color: transparent;
+        border-color: #6c757d;
     }
 
 </style>
