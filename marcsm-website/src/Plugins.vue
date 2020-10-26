@@ -1,23 +1,6 @@
 <template>
     <div>
-        <!-- <div id="page-top" class="mask">
-            
-            <flat-surface-shader class="shader" type="webgl"
-                            :mesh="fss_back.mesh"
-                            :light="fss_back.light">
-            </flat-surface-shader>
-            
-            <div class="vignette"></div>
-        </div> -->
-
-        <!-- <div class="container-fluid"> -->
-        <div>
-
-            <div overlay class="container text-center p-10">
-                <!-- <h1>Plugins</h1> -->
-                <!-- <p>Take a look at some of the projects I have worked on</p> -->
-            </div>
-
+        <header class="position-relative" style="height: 500px; overflow: hidden;">
             <b-img
                     v-blur="{
                         isBlurred: true,
@@ -28,41 +11,25 @@
                     blank-color="#000"
                     overlay
                     center
-                    fluid-grow src="dist/img/projects/backgrounds/ableton_wallpaper.png">
+                    fluid-grow
+                    class="h-100 position-absolute"
+                    src="dist/img/projects/backgrounds/ableton_wallpaper.png">
                     
                 </b-img>
-
-            
-        </div>
-
-        <!-- <div style="height: 500px; overflow: hidden">
-            <div class="position-absolute" style="margin: -1em; overflow: hidden">
-                <b-img
-                    v-blur="{
-                        isBlurred: true,
-                        opacity: 1.0,
-                        filter: 'blur(8px)',
-                        transition: 'none'
-                    }"
-                    blank-color="#000"
-                    
-                    center
-                    fluid-grow src="dist/img/projects/backgrounds/ableton_wallpaper.png">
-                    
-                </b-img>
-
-                <b-img class="mh-100" src="dist/img/projects/backgrounds/ableton_wallpaper.png" fluid center alt="Morphex"></b-img>
-            
+            <!-- <div class="container h-100 w-100 position-relative d-flex align-items-center flex-column "> -->
+            <div class="container-fluid vignette h-100 w-100 position-relative d-flex align-items-center">
+                <div class="w-100 text-center contrast-shadow">
+                    <h1 class="plugins-title display-1">Plugins</h1>
+                </div>
+                
+                <!-- <div class="intro-text"> -->
+                    <!-- <div class="intro-lead-in">Comen&ccedil;a el teu viatge...</div> -->
+                    <!-- <div class="intro-heading"></div> -->
+                    <!-- <div class="overlay"></div> -->
+                    <!-- <a href="#services" class="page-scroll btn btn-xl">Endavant!</a> -->
+                <!-- </div> -->
             </div>
-
-            <div class="position-absolute hero">
-                <h1>Plugins</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut tempor enim.</p>
-                <div class="btn btn-primary">Learn more about us</div>
-                <div class="btn btn-primary">Contact us</div>
-            </div>
-
-        </div> -->
+        </header>
     </div>
 </template>
 
@@ -72,6 +39,13 @@
 
 <style lang="scss">
 
+    // @import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+    .plugins-title {
+        font-family: 'Baloo 2', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: normal;
+    }
 
 //     body {
 //     font-family: 'Montserrat', sans-serif;

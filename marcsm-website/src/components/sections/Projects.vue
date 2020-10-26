@@ -164,11 +164,11 @@
 
 			</br>
 
-			<!-- <div class="row">
+			<div class="row">
 				<div class="col text-center">
 					<b-button href="plugins">All Plugins</b-button>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</section>
 </template>
