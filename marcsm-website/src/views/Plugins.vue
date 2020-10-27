@@ -30,6 +30,19 @@
                 <!-- </div> -->
             </div>
         </header>
+        <!-- <div class="container"> -->
+            <b-tabs pills card class="nav-justified" active-tab-item-class="font-weight-bold text-uppercase text-danger" active-tab-class="font-weight-bold text-success">
+                <b-tab active title="Morphex">
+                    <morphex show></morphex>
+                </b-tab>
+                <b-tab title="Essentials">
+                    <b-alert show>I'm always mounted</b-alert>
+                </b-tab>
+                <b-tab title="Slayer">
+                    <b-alert show>I'm always mounted</b-alert>
+                </b-tab>
+            </b-tabs>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -39,12 +52,19 @@
 
 <style lang="scss">
 
+    $primary-color: rgb(80, 80, 80);
+
     // @import url('https://fonts.googleapis.com/css?family=Satisfy');
 
     .plugins-title {
         font-family: 'Baloo 2', sans-serif;
         -webkit-font-smoothing: antialiased;
         font-weight: normal;
+    }
+
+    .nav-pills .nav-link.active
+    {
+        background-color: $primary-color;
     }
 
 //     body {

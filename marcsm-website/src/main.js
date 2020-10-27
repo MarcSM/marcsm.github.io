@@ -29,24 +29,29 @@ Vue.use(vBlur)
 
 // var tableActions = require('./components/tables/partials/Actions.vue')
 
-// Pages
-Vue.component('home', require('./Home.vue').default);
-Vue.component('plugins', require('./Plugins.vue').default);
+// Views
+Vue.component('home', require('./views/Home.vue').default);
+Vue.component('plugins', require('./views/Plugins.vue').default);
 
 // Components
-Vue.component('custom-header', require('./components/CustomHeader.vue').default);
 Vue.component('navigation', require('./components/Navbar.vue').default);
 Vue.component('custom-footer', require('./components/Footer.vue').default);
 
-// Sections
-Vue.component('section-about', require('./components/sections/About.vue').default);
-Vue.component('section-projects', require('./components/sections/Projects.vue').default);
+// Home
+Vue.component('custom-header', require('./components/home/CustomHeader.vue').default);
+
+// Home - Sections
+Vue.component('section-about', require('./components/home/sections/About.vue').default);
+Vue.component('section-projects', require('./components/home/sections/Projects.vue').default);
+
+// Plugins
+Vue.component('morphex', require('./components/plugins/Morphex.vue').default);
 
 // Routes
 Vue.use(Router);
 
-import Home from './Home.vue';
-import Plugins from './Plugins.vue';
+import Home from './views/Home.vue';
+import Plugins from './views/Plugins.vue';
 
 const router = new Router({
     mode: 'history',
