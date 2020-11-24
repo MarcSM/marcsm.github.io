@@ -25,6 +25,8 @@
 				<b-button variant="primary">Download</b-button>
 			</b-card-body>
 		</b-card>
+
+		<!-- TODO - Include changelog -->
   
 		<b-card no-body bg-variant="transparent" text-variant="white">
 			<b-row no-gutters>

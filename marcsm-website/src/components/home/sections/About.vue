@@ -9,13 +9,13 @@
 					</h3>
 					<br>
 					<p class="text-justify">
-						A passionate of music and graphic design; I have done several own music productions and collaborations, as well as the sound of audiovisual content. I have skill and fluidity to talk in public, high communication skills and conviction. I am working very hard to be the best Sound Tech Researcher / Audio Software Developer you can find.
+						A passionate of music and graphic design; I have done several own music productions and collaborations, as well as the sound of audiovisual content. I have skill and fluidity to talk in public, high communication skills and conviction.
 					</p>
 					<p class="text-justify">
 						With more than 5 years of experience in the software development industry. I have worked with C ++, Python, Matlab and C# among others. And SDKs I worked with: JUCE, Steinberg's VST SDK, .NET, Entity Framework, Laravel, Vue, Bootstrap and many more. I programmed a game in C ++ back in the university using the SDL library mainly, and my final year project was to program a game engine in C++. My passions though had always been audio signal processing, sound design and music production. I am working developing tools to help musicians and artists around the world on their creative process and to express themselves using these tools.
 					</p>
 					<p class="text-justify">
-						I consider myself a very creative person, I like to innovate and propose new solutions and points of view if suitable and viable. Orderly, punctual, hardworking and detail oriented. I learn fast. I like new things and big challenges. 
+						I consider myself a very creative person, I like to innovate and propose new solutions and points of view if suitable and viable. Orderly, punctual, hardworking and detail-oriented. Fast learner and I like new things and great challenges.
 					</p>
 				</div>
 			</div>
